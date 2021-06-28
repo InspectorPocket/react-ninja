@@ -1,0 +1,24 @@
+@import "../../sass/variables";
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid $grey-light;
+    h1 { color: $red; }
+    ul {
+        display: flex;
+        align-items: center;
+        & > li {
+            &:not(:first-of-type) { margin-left: 16px; }
+            & > a {
+                text-decoration: none;
+                padding: 6px;
+                &:hover { color: $red; }
+            }
+        }
+    }
+}
