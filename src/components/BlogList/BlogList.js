@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './BlogList.module.scss';
 
 const BlogList = ({blogs, title}) => {
@@ -7,8 +8,10 @@ const BlogList = ({blogs, title}) => {
       <h2>{title}</h2>
       {blogs.map((blog) => (
         <article className={styles.blog} key={blog.id}>
-          <h2>{blog.title}</h2>
-          <p>Written by: {blog.author}</p>
+          <Link to={`/blogs/${blog.id}`}>
+            <h2>{blog.title}</h2>
+            <p>Written by: {blog.author}</p>
+          </Link>
         </article>
       ))}
     </div>

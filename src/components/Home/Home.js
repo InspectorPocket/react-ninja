@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import { useState, useEffect } from 'react';
 import BlogList from '../BlogList/BlogList';
 import useFetch from '../../hooks/useFetch';
 
