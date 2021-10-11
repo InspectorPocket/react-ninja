@@ -1,16 +1,22 @@
 {
-    "blogs": [
-        {
-            "title": "My first blog",
-            "body": "Lorum ipsum and all that quick brown fox jumping thingy.",
-            "author": "Mario",
-            "id": 1
-        },
-        {
-            "title": "Opening party",
-            "body": "Lorum ipsum and all that quick brown fox jumping thingy.",
-            "author": "Yoshi",
-            "id": 2
-        }
-    ]
+  "blogs": [
+    {
+      "title": "My first blog",
+      "body": "Lorum ipsum and all that quick brown fox jumping thingy.",
+      "author": "Mario",
+      "id": 1
+    },
+    {
+      "title": "Opening party",
+      "body": "Lorum ipsum and all that quick brown fox jumping thingy.",
+      "author": "Yoshi",
+      "id": 2
+    },
+    {
+      "title": "New bloggins",
+      "content": "Some mad stuff and stuff and things",
+      "author": "Mario",
+      "id": 3
+    }
+  ]
 }
