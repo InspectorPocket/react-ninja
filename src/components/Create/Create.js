@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 import styles from './Create.module.scss';
 
 const Create = () => {
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [body, setBody] = useState('');
   const [author, setAuthor] = useState('Mario');
   const [isPending, setIsPending] = useState(false);
+  const history = useHistory();
   
-  const handleSubmit =e => {
+  const handleSubmit = e => {
     e.preventDefault();
-    const blog = {title, content, author};
+    const blog = {title, body, author};
 
     setIsPending(true);
 
@@ -20,9 +22,9 @@ const Create = () => {
     }) .then(() => {
       console.log('Blog sucessfully added');
       setIsPending(false);
+      // history.go(1);
+      history.push('/');
     })
-    
-    console.log(blog);
   }
 
   return (
@@ -36,11 +38,11 @@ const Create = () => {
           value={title}
           onChange={e => setTitle(e.target.value)}
         />
-        <label>Content</label>
+        <label>Body</label>
         <textarea
           required
-          value={content}
-          onChange={e => setContent(e.target.value)}
+          value={body}
+          onChange={e => setBody(e.target.value)}
         />
         <label>Author</label>
         <select
